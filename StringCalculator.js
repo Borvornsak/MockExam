@@ -26,17 +26,17 @@ function add(strings) {
 }
 
 function addWithDelimiter(strings, delimiter) {
-  var numbersArray = strings.split(delimiter).map(number => Number(number));
+  let numbersArray = strings.split(delimiter).map(number => Number(number));
   //console.log("numbersArray => " + numbersArray);
   //if (numbersArray.length > 2) return false;
   for (let i = 0; i < numbersArray.length; i++) {
-    if (isNaN(numbersArray[i])) return false;
+    if (isNaN(numbersArray[i])) throw new Error("nonNumbers error");
   }
-  var sum = numbersArray
+  let sum = numbersArray
     .filter(val => val > 0 && val <= 1000)
     .reduce((prev, curr) => prev + curr, 0);
   //console.log("sum => " + sum);
-  var negativeNumbers = numbersArray.filter(val => val < 0);
+  let negativeNumbers = numbersArray.filter(val => val < 0);
   //console.log(negativeNumbers);
   if (negativeNumbers.length > 0) {
     //console.log(`          [${negativeNumbers}]`);

@@ -8,8 +8,10 @@ describe("String Calculator", () => {
       // it("MoreThan2NumbersAreUsed", () => {
       //   add("1,2,3").should.be.false;
       // });
-      it('add("1,x")should be false', () => {
-        add("1,x").should.be.false;
+      it('add("1,x")should throw error', () => {
+        (() => {
+          add("1,x");
+        }).should.throw(Error, "error");
       });
     });
 
