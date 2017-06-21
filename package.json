@@ -1,0 +1,19 @@
+{
+  "name": "MockExam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://Borvornsak@github.com/Borvornsak/MockExam.git",
+  "author": "Borvornsak Laoratanapong <borvornsak.la@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register ./**/*.spec.js -w"
+  }
+}
